@@ -27,3 +27,6 @@
 0:0:0:0:0:0:0:1 - - [04/Dec/2019:03:36:13 +0900] "POST /firstweb/LifecycleServlet HTTP/1.1" 200 14
 127.0.0.1 - - [04/Dec/2019:04:00:00 +0900] "GET / HTTP/1.1" 404 1074
 0:0:0:0:0:0:0:1 - - [04/Dec/2019:04:00:01 +0900] "GET /firstweb/ReadHeaderServlet HTTP/1.1" 200 464
+127.0.0.1 - - [04/Dec/2019:04:11:53 +0900] "GET / HTTP/1.1" 404 1074
+0:0:0:0:0:0:0:1 - - [04/Dec/2019:04:11:54 +0900] "GET /firstweb/ParamServlet HTTP/1.1" 200 25
+0:0:0:0:0:0:0:1 - - [04/Dec/2019:04:12:07 +0900] "GET /firstweb/ParamServlet?name=youjin&email=estele.choi HTTP/1.1" 200 34
