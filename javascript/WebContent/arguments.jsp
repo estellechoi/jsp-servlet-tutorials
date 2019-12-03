@@ -11,7 +11,7 @@
 		if (arguments.length < 3) return;
 		
 		// 반복문으로 값 확인하기
-		for (int i=0, len = arguments.length; i<len; i++) {
+		for (var i=0, len = arguments.length; i<len; i++) {
 			console.log(arguments[i]);
 		}
 		
