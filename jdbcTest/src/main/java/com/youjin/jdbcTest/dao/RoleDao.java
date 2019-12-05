@@ -5,7 +5,8 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.sql.Statement;
+import java.util.ArrayList;
+import java.util.List;
 
 import com.youjin.jdbcTest.dto.Role;
 
@@ -219,6 +220,46 @@ public class RoleDao {
 			}
 		}		
 		return deleteCount;
+	}
+	
+	// 5) 모든 레코드를 조회하기 
+	public List<Role> getRoles() {
+		
+		// 데이터 조회값을 담을 객체 
+		List<Role> list = new ArrayList<Role>();
+		
+		// 드라이버 로드 
+		try {
+			Class.forName("com.mysql.cj.jdbc.Driver");
+		} catch (ClassNotFoundException e) {
+			e.printStackTrace();
+		}
+		
+		// 쿼리문 
+		String sql = "select * from role order by role_id desc";
+		
+		// * try with resource
+		// try () 에 사용한 리소스를 얻어오는 코드를 작성하면, 실행 후 리소스들을 자동으로 close() 
+		try (Connection conn = DriverManager.getConnection(dbUrl, dbUser, dbPwd);
+				PreparedStatement pstmt = conn.prepareStatement(sql)) {
+			
+			try (ResultSet rs = pstmt.executeQuery()) {
+				while (rs.next()) {
+					int roleId = rs.getInt("role_id");
+					String description = rs.getString("description");
+					Role role = new Role(roleId, description);
+					list.add(role); // 반복문이 반복될 때마다 list 객체에 Role 객체를 생성하여 추가한다.
+				}
+			}
+			catch (Exception ex) {
+				ex.printStackTrace();
+			}
+		}
+		catch (Exception e) {
+			e.printStackTrace();
+		}
+		
+		return list;
 	}
 
 }
