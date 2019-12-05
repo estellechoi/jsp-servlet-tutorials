@@ -359,3 +359,51 @@
 2019-12-05 20:43:06,578 [Worker-74: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/youjin/eclipse-ee-workspace/jdbcTest/src/main/resources
 2019-12-05 20:43:06,579 [Worker-74: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
 2019-12-05 20:43:06,579 [Worker-74: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/youjin/eclipse-ee-workspace/jdbcTest/src/test/resources
+2019-12-05 20:44:11,792 [Worker-71: Building workspace] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.youjin:jdbcTest:0.0.1-SNAPSHOT @ /Users/youjin/eclipse-ee-workspace/jdbcTest/pom.xml.
+2019-12-05 20:44:11,910 [Worker-71: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-12-05 20:44:11,910 [Worker-71: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/youjin/eclipse-ee-workspace/jdbcTest/src/main/resources
+2019-12-05 20:44:11,912 [Worker-71: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-12-05 20:44:11,912 [Worker-71: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/youjin/eclipse-ee-workspace/jdbcTest/src/test/resources
+2019-12-05 20:44:27,955 [Worker-78: Building workspace] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.youjin:jdbcTest:0.0.1-SNAPSHOT @ /Users/youjin/eclipse-ee-workspace/jdbcTest/pom.xml.
+2019-12-05 20:44:33,738 [Worker-73: reload maven project] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/mysql/mysql-connector-java/5.1.45/mysql-connector-java-5.1.45.pom
+2019-12-05 20:44:34,330 [Worker-73: reload maven project] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/mysql/mysql-connector-java/5.1.45/mysql-connector-java-5.1.45.pom
+2019-12-05 20:44:34,933 [Worker-73: reload maven project] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/mysql/mysql-connector-java/5.1.45/mysql-connector-java-5.1.45.jar
+2019-12-05 20:45:02,677 [Worker-78: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/mysql/mysql-connector-java/5.1.45/mysql-connector-java-5.1.45.pom
+2019-12-05 20:45:03,020 [Worker-78: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/mysql/mysql-connector-java/5.1.45/mysql-connector-java-5.1.45.pom
+2019-12-05 20:45:03,460 [Worker-78: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/mysql/mysql-connector-java/5.1.45/mysql-connector-java-5.1.45.jar
+2019-12-05 20:45:15,780 [Worker-78: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/mysql/mysql-connector-java/5.1.45/mysql-connector-java-5.1.45.jar
+2019-12-05 20:45:15,946 [Worker-78: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-12-05 20:45:15,946 [Worker-78: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/youjin/eclipse-ee-workspace/jdbcTest/src/main/resources
+2019-12-05 20:45:15,948 [Worker-78: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-12-05 20:45:15,948 [Worker-78: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/youjin/eclipse-ee-workspace/jdbcTest/src/test/resources
+2019-12-05 20:45:17,186 [Worker-78: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-12-05 20:45:17,186 [Worker-78: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/youjin/eclipse-ee-workspace/jdbcTest/src/main/resources
+2019-12-05 20:45:17,187 [Worker-78: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-12-05 20:45:17,188 [Worker-78: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/youjin/eclipse-ee-workspace/jdbcTest/src/test/resources
+2019-12-05 20:45:19,315 [Worker-80: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/mysql/mysql-connector-java/5.1.45/mysql-connector-java-5.1.45-sources.jar
+2019-12-05 20:45:56,246 [Worker-80: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/mysql/mysql-connector-java/5.1.45/mysql-connector-java-5.1.45-sources.jar
+2019-12-05 20:45:56,260 [Worker-80: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for mysql:mysql-connector-java:5.1.45
+2019-12-05 20:45:56,388 [Worker-71: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-12-05 20:45:56,388 [Worker-71: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/youjin/eclipse-ee-workspace/jdbcTest/src/main/resources
+2019-12-05 20:45:56,389 [Worker-71: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-12-05 20:45:56,390 [Worker-71: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/youjin/eclipse-ee-workspace/jdbcTest/src/test/resources
+2019-12-05 20:46:39,734 [Worker-75: Updating Maven Project] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update started
+2019-12-05 20:46:39,989 [Worker-75: Updating Maven Project] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.youjin:jdbcTest:0.0.1-SNAPSHOT @ /Users/youjin/eclipse-ee-workspace/jdbcTest/pom.xml.
+2019-12-05 20:46:40,082 [Worker-75: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /jdbcTest/src/main/java
+2019-12-05 20:46:40,082 [Worker-75: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /jdbcTest/src/test/java
+2019-12-05 20:46:40,139 [Worker-75: Updating Maven Project] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update completed: 0 sec
+2019-12-05 20:46:40,279 [Worker-77: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-12-05 20:46:40,279 [Worker-77: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/youjin/eclipse-ee-workspace/jdbcTest/src/main/resources
+2019-12-05 20:46:40,281 [Worker-77: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-12-05 20:46:40,281 [Worker-77: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/youjin/eclipse-ee-workspace/jdbcTest/src/test/resources
+2019-12-05 20:47:05,939 [Worker-73: reload maven project] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/mysql/mysql-connector-java/5.1.45/mysql-connector-java-5.1.45.jar
+2019-12-05 20:47:22,211 [Worker-79: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-12-05 20:47:22,211 [Worker-79: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/youjin/eclipse-ee-workspace/jdbcTest/src/main/resources
+2019-12-05 20:47:22,212 [Worker-79: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-12-05 20:47:22,212 [Worker-79: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/youjin/eclipse-ee-workspace/jdbcTest/src/test/resources
+2019-12-05 20:47:48,235 [Worker-6: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2019-12-05 20:47:51,072 [Worker-17: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-12-05 20:47:51,073 [Worker-17: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/youjin/eclipse-ee-workspace/jdbcTest/src/main/resources
+2019-12-05 20:47:51,075 [Worker-17: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-12-05 20:47:51,075 [Worker-17: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/youjin/eclipse-ee-workspace/jdbcTest/src/test/resources
+2019-12-05 20:48:01,063 [Worker-6: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Updating Gradle version information cache failed. Using outdated cache.
