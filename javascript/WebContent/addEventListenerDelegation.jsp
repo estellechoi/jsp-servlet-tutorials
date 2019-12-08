@@ -40,7 +40,7 @@
 				
 		// * 이벤트 버블링 : 이벤트가 등록된 요소에 포함된 요소들에 대해서도 이벤트가 발생한다.
 		// 클릭한 지점이 하위엘리먼트라고 하여도, 그것을 감싸고 있는 상위 엘리먼트까지 올라가면서 이벤트리스너가 있는지 찾는 과정입니다.
-		// currentTarget : ul (이벤트가 등록된 요소) -> event delegation(대표자)
+		// currentTarget : ul (이벤트가 등록된 요소) -> event delegation(위임)
 		// target : img (실제 클릭한 요소)
 		ul.addEventListener("click", function(evt) {
 // 			log.innerHTML = evt.currentTarget.tagName + ", " + evt.target.tagName;
