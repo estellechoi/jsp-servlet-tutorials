@@ -9,7 +9,6 @@
 <body>
 
 <script>
-//숫자 타입으로만 구성된 요소를 뽑아 배열을 만들어보도록 해보세요.
 
 const data = {
     "debug": "on",
@@ -37,33 +36,28 @@ const data = {
         "onMouseUp": "sun1.opacity = (sun1.opacity / 100) * 90;"
     }
 }
+//숫자 타입으로만 구성된 요소를 뽑아 배열을 만들어보도록 해보세요.
+var numberValues = [];
 
 // data 객체의 key 값들로 구성된 배열
-var dataKeys = Object.keys(data);
-
-// data 객체의 value 값의 타입이 string 이 아닌 요소의 key 값들로만으로 구성된 배열 반환
-var dataKeysFiltered = dataKeys.filter(function(dataKey) {
-	return typeof data[dataKey] != "string";
+// data 객체의 value 값의 타입이 object 인 요소의 key 값들로만으로 구성된 배열 반환
+var dataKeysFiltered = Object.keys(data).filter(function(dataKey) {
+	return typeof data[dataKey] == "object";
 });
-
-document.write(dataKeysFiltered + "<hr/>");
-
-// value 타입이 숫자인 요소들로만 구성된 배열 선언
-var ValuesFiltered = [];
 
 dataKeysFiltered.forEach(function(key) {
 	// 각 객체(data[key])의 값들로 구성된 배열
 	var values = Object.values(data[key]);
 	
 	// 타입이 number 인 요소만으로 구성된 배열 봔환
-	var numberValues = values.filter(function(value) {
+	var filtered = values.filter(function(value) {
 		return typeof value == "number";
 	});
 	
-	ValuesFiltered = ValuesFiltered.concat(numberValues);
+	numberValues.push(filtered);
 });
 
-document.write(ValuesFiltered); // 완성된 배열 출력 !
+document.write(numberValues); // 완성된 배열 출력 !
 
 
 
