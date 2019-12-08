@@ -23,7 +23,8 @@ var ul = document.querySelector("ul");
 var reds = document.querySelectorAll("li.red");
 
 reds.forEach(function(value, index) {
-	ul.removeChild(reds[index]);
+// 	ul.removeChild(reds[index]);
+reds[index].remove();
 });
 
 </script>
