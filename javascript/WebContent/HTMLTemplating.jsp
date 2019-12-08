@@ -7,9 +7,19 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<section class="test"></section>
+	<ul class="test"></ul>
 	<input type="button" value="click" id="btn" />
+	
+	<!-- html template 코드 숨기기 : javascript 코드에 정적인 코드 보관하지 않기 위함 -->
+	<!-- script 태그의 type 이 text/javascript 가 아니면, 브라우저는 렌더링하지 않고 무시한다 -->
+	<script type="text/template" id="html-template">
+		<li>
+			<h4>{title}</h4><p>{content}</p><div>{price}</div>
+		</li>
+	</script>
+	
 	<script>
+		var html = document.querySelector("#html-template").innerHTML;
 		var test = document.querySelector(".test");
 		var btn = document.querySelector("#btn");
 		var data = [
@@ -32,7 +42,7 @@
 		];
 		
 		// template
-		var html = "<li><h4>{title}</h4><p>{content}</p><div>{price}</div></li>";
+// 		var html = "<li><h4>{title}</h4><p>{content}</p><div>{price}</div></li>";
 		
 // 		var resultHTML = [];
 // 		data.forEach((obj)=> {
