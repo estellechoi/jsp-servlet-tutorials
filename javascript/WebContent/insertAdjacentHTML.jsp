@@ -19,13 +19,14 @@
 <script>
 
 // insertAdjacentHTML 메서드를 사용해서, orange와  banana 사이에 새로운 과일을 추가하시오.
-var pear = document.createElement("li");
-var text = document.createTextNode("pear");
-pear.appendChild(text);
+// var pear = document.createElement("li");
+// var text = document.createTextNode("pear");
+// pear.appendChild(text);
 
-var list = document.querySelector("ul");
+// var list = document.querySelector("ul");
 var banana = document.querySelector("li:nth-child(3)");
-list.insertBefore(pear, banana);
+
+banana.insertAdjacentHTML("beforebegin", "<li>pear</li>");
 </script>
 </body>
 </html>
