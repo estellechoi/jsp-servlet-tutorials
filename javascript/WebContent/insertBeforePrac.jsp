@@ -19,6 +19,7 @@
 <script>
 
 // apple을 grape 와 strawberry 사이로 옮기시오.
+
 var list = document.querySelector("ul");
 var apple = document.querySelector("li:nth-child(1)");
 var strawberry = document.querySelector("li:nth-child(5)");
