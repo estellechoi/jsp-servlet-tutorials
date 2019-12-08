@@ -36,7 +36,7 @@
 		data.forEach(function (obj) {
 				resultHTML += `
 					<li>
-						<h4>${2+4}</h4>
+						<h4>${obj.title}</h4>
 						<p>${obj.content}</p>
 						<div>${obj.price}</div>
 					</li>
