@@ -34,6 +34,16 @@
 		// template
 		var html = "<li><h4>{title}</h4><p>{content}</p><div>{price}</div></li>";
 		
+// 		var resultHTML = [];
+// 		data.forEach((obj)=> {
+// 			resultHTML.push(
+// 				html.replace("{title}", obj.title)
+// 					.replace("{content}", obj.content)
+// 					.replace("{price}", obj.price)
+// 			);
+// 		});
+		
+		
 		var i = 0;
 		document.addEventListener("DOMContentLoaded", function() {
 			var resultHTML = html.replace("{title}", data[i].title)
