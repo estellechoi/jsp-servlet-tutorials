@@ -9,4 +9,5 @@
 <fullyQualifiedTypeName name="java.sql.Statement"/>
 <fullyQualifiedTypeName name="java.sql.PreparedStatement"/>
 <fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="com.youjin.api.dto.Role"/>
 </qualifiedTypeNameHistroy>
