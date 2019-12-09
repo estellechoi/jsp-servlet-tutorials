@@ -12,7 +12,7 @@ public class CarMain {
 		System.out.println("초기화 완료");
 		
 		// 해당 빈에 Engine 빈이 의존 주입되어있다.
-		Car car = (Car) ac.getBean("c");
+		Car car = (Car) ac.getBean(Car.class);
 		
 		car.run();
 	}

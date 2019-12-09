@@ -1,6 +1,12 @@
 package com.youjin.ditest;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
+@Component // 빈의 이름은 클래스명을 소문자로 바꾼 이름으로 자동 등록된다. (여기에서 빈의 이름은 car 가 된다.)
 public class Car {
+	
+	@Autowired // 타입이 같은 빈을 찾아서 자동 주입.
 	private Engine v8;
 	
 	public Car() {
