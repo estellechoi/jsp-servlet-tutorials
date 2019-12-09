@@ -1663,3 +1663,23 @@ Caused by: org.xml.sax.SAXParseExceptionpublicId: platform:/resource/mvctest/src
 	at org.eclipse.jem.internal.util.emf.workbench.ProjectResourceSetImpl.demandLoad(ProjectResourceSetImpl.java:811)
 	at org.eclipse.emf.ecore.resource.impl.ResourceSetImpl.demandLoadHelper(ResourceSetImpl.java:274)
 	... 124 more
+
+!ENTRY org.eclipse.egit.core 4 0 2019-12-10 02:56:52.814
+!MESSAGE An exception occurred during push on URI https://github.com/estellechoi/jsp-servlet-tutorials.git: https://github.com/estellechoi/jsp-servlet-tutorials.git: not authorized
+!STACK 0
+org.eclipse.jgit.api.errors.TransportException: https://github.com/estellechoi/jsp-servlet-tutorials.git: not authorized
+	at org.eclipse.jgit.api.PushCommand.call(PushCommand.java:180)
+	at org.eclipse.egit.core.op.PushOperation.run(PushOperation.java:217)
+	at org.eclipse.egit.ui.internal.push.PushJob.performJob(PushJob.java:86)
+	at org.eclipse.egit.ui.internal.jobs.RepositoryJob.run(RepositoryJob.java:59)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: org.eclipse.jgit.errors.TransportException: https://github.com/estellechoi/jsp-servlet-tutorials.git: not authorized
+	at org.eclipse.jgit.transport.TransportHttp.connect(TransportHttp.java:570)
+	at org.eclipse.jgit.transport.TransportHttp.openPush(TransportHttp.java:466)
+	at org.eclipse.jgit.transport.PushProcess.execute(PushProcess.java:160)
+	at org.eclipse.jgit.transport.Transport.push(Transport.java:1367)
+	at org.eclipse.jgit.api.PushCommand.call(PushCommand.java:170)
+	... 4 more
+
+!ENTRY org.eclipse.egit.ui 4 0 2019-12-10 02:56:52.817
+!MESSAGE Can't connect to any repository: https://github.com/estellechoi/jsp-servlet-tutorials.git (https://github.com/estellechoi/jsp-servlet-tutorials.git: not authorized)
