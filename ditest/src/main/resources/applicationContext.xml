@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+						http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="testBean" class="com.youjin.ditest.TestBean" />
+	
+	<bean id="e" class="com.youjin.ditest.Engine" />
+	<bean id="c" class="com.youjin.ditest.Car">
+		<!-- setEngine(Engine e) 을 통한 의존성주입 -->
+		<property name="engine" ref="e" />
+	</bean>
+</beans>
