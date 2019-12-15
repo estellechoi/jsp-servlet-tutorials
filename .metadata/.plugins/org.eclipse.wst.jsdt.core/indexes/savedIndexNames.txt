@@ -8,7 +8,6 @@ INDEX VERSION 1.4+/Users/youjin/eclipse-ee-workspace/.metadata/.plugins/org.ecli
 428028540.index
 2608485465.index
 2836882961.index
-2836882961.index
 3617115265.index
 1439154407.index
 777533780.index
