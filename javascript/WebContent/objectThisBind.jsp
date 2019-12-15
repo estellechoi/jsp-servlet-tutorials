@@ -9,10 +9,25 @@
 <body>
 
 <script>
+	// bind() 메서드는 새로운 함수를 생성합니다.
+	// bind() 가 호출된 함수의 this 키워드를 주어진 값으로 설정한다.
+	const module = {
+  		x: 42,
+  		getX: function() {
+    		return this.x;
+  		}
+	}
+	// unbound
+	const unboundGetX = module.getX;
+	document.write(unboundGetX() + "<br />");
+	// bound
+	// unboundGetX 함수의 this 를 module 로 설정한다.
+	const boundGetX = unboundGetX.bind(module);
+	document.write(boundGetX() + "<br />");
 	
 	// bind(this) : this 를 바인딩하는 (참조 객체를 this 로 하는) 새로운 함수를 반환한다.
 	var newfunc = function(){
-		document.write("function ~ <br />");
+		document.write("함수 호출 <br />");
 	}.bind(this); // 여기서 this 는 window...
 	
 	newfunc();
