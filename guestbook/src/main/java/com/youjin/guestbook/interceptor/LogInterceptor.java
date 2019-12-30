@@ -14,6 +14,7 @@ public class LogInterceptor extends HandlerInterceptorAdapter {
 			throws Exception {
 		System.out.println(handler.toString() + " 가 호출되었습니다. ");
 		return true;
+		// return하는 boolean 값으로 이후 Controller를 수행할지 여부를 결정한다.
 	}
 
 	// Controller 메소드 실행 후 실행	
