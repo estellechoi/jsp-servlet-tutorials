@@ -5,10 +5,13 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.DefaultServletHandlerConfigurer;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
+import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
 import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
 import org.springframework.web.servlet.config.annotation.ViewControllerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
 import org.springframework.web.servlet.view.InternalResourceViewResolver;
+
+import com.youjin.guestbook.interceptor.LogInterceptor;
 
 @Configuration
 @EnableWebMvc
@@ -43,6 +46,14 @@ public class ContextConfiguration extends WebMvcConfigurerAdapter {
         resolver.setSuffix(".jsp");
         return resolver;
     }
+
+    // 인터셉터 등록 : addInterceptors() 메소드 오버라이드
+	@Override
+	public void addInterceptors(InterceptorRegistry registry) {
+		// 인터셉터 객체를 생성하여 인자로 넣어준다 
+		registry.addInterceptor(new LogInterceptor());
+	}
+    
 
 	
 }
