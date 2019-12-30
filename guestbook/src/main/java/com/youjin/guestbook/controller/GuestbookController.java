@@ -15,6 +15,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.SessionAttribute;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.youjin.guestbook.dto.Guestbook;
 import com.youjin.guestbook.service.GuestbookService;
@@ -113,6 +115,24 @@ public class GuestbookController {
 		guestbookService.addGuestbook(guestbook, clientIp);
 		
 		// 작업 종료 후 list.jsp 로 리다이렉트
+		return "redirect:list";
+	}
+	
+	@GetMapping(path = "/delete")
+	public String delete(@RequestParam(name = "id", required = true) Long id,
+						@SessionAttribute("isAdmin") String isAdmin,
+						HttpServletRequest request,
+						RedirectAttributes redirectAttr) {
+		
+		if (isAdmin == null || !"true".equals(isAdmin)) {
+			redirectAttr.addFlashAttribute("errorMessage", "로그인을 하지 않았습니다.");
+			// 로그인 페이지로 리다이렉트
+			return "redirect:loginform";
+		}
+		
+		// 클라이언트 IP 얻기
+		String clientIp = request.getRemoteAddr();
+		guestbookService.deleteGuestbook(id, clientIp);	
 		return "redirect:list";
 	}
 }
