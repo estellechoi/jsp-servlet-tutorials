@@ -10,6 +10,7 @@ import javax.servlet.http.HttpServletResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
+import org.springframework.web.bind.annotation.CookieValue;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -26,45 +27,49 @@ public class GuestbookController {
 	
 	@GetMapping(path="/list")
 	public String list(@RequestParam(name = "start", required = false, defaultValue ="0") int start,
-			ModelMap model, HttpServletRequest request, HttpServletResponse response) {
+			ModelMap model, @CookieValue(value = "count", required = true, defaultValue = "0") String visitCount,
+			HttpServletResponse response) {
 		// @RequestParam 값이 없으면, 기본값은 0 으로 설정
+		// @CookieValue : 쿠키 값을 인자에 저장해서 사용 가능
 		
 		// * 쿠키로 방문횟수 구현하기
-		String cookieCount = null;
-		boolean find = false;
+		// String visitCount = null;
+		// boolean find = false;
 		
-		// 클라이언트 요청에서 쿠키 배열 얻기
+		// 클라이언트 요청에서 쿠키 배열 얻기 request.getCookies();
 		// 쿠키가 없으면 null 반환 (첫방문)
-		Cookie[] cookies = request.getCookies();
+		// Cookie[] cookies = request.getCookies();
 		
 		// 쿠키 있을 때
+		/*
 		if (cookies != null) {
 			for(Cookie cookie: cookies) {
 				// "count" 쿠키가 있을 때
 				if ("count".equals(cookie.getName())) {
 					find = true;
-					cookieCount = cookie.getValue();
+					visitCount = cookie.getValue();
 					break;
 				}
 			}
 		}
+		*/
 		
 		// find = false 일 때 (첫방문)
-		if (!find) {
-			cookieCount = "1";
-		}
+		// if (!find) {
+		//	visitCount = "1";
+		// }
 		// true 일 때
-		else {
+		// else {
 			try {
-				int i = Integer.parseInt(cookieCount);
-				cookieCount = Integer.toString(++i);				
+				int i = Integer.parseInt(visitCount);
+				visitCount = Integer.toString(++i);				
 			} catch (Exception e) {
-				cookieCount = "1";
+				visitCount = "1";
 			}
-		}
+		// }
 		
 		// 쿠키 생성	 
-		Cookie cookie = new Cookie("count", cookieCount);
+		Cookie cookie = new Cookie("count", visitCount);
 		cookie.setMaxAge(60 * 60 * 24 * 365);
 		// 지정한 경로 이하에 모두 쿠키 적용
 		cookie.setPath("/"); 
@@ -93,7 +98,7 @@ public class GuestbookController {
 		model.addAttribute("list", list);
 		model.addAttribute("count", count);
 		model.addAttribute("pageStartList", pageStartList);
-		model.addAttribute("cookieCount", cookieCount);
+		model.addAttribute("cookieCount", visitCount);
 		
 		return "list";
 	}
