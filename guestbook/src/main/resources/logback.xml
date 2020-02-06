@@ -10,12 +10,12 @@
 
 	<!-- RollingFileAppender 파일에 로그 남기기 (일자별 로그 관리)-->
     <appender name="FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
-    	<!-- 로그 파일 저장 경로 : 어떤 디렉토리를 기준으로 작성하는거지 ?-->
-        <file>/tmp/access.log</file>
+    	<!-- 로그 파일 저장 경로 : 최상위 디렉토리를 기준으로 경로 설정 ? -->
+        <file>/Users/youjin/tmp/access.log</file>
         
         <!-- 파일명 포맷, 최대 로그 수 설정 -->
         <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
-            <fileNamePattern>/tmp/access-%d{yyyy-MM-dd}.log</fileNamePattern>
+            <fileNamePattern>/Users/youjin/tmp/access-%d{yyyy-MM-dd}.log</fileNamePattern>
             <maxHistory>30</maxHistory>
         </rollingPolicy>
 
