@@ -1,7 +1,11 @@
 package com.youjin.guestbook.controller;
 
+import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.InputStream;
+import java.io.OutputStream;
+
+import javax.servlet.http.HttpServletResponse;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -41,6 +45,38 @@ public class FileController {
 		}
 		
 		return "uploadformOk";
+	}
+	
+	// 임시코드
+	@GetMapping(path = "/download")
+	public void download(HttpServletResponse response) {
+		//db에서 읽어왔다고 가정
+		String fileName = "wallpaper_beatles.jpeg";
+		String saveFileName = "Users/youjin/tmp/wallpaper_beatles.jpeg";
+		String contentType = "image/jpeg";
+		int fileLength = 1116303;
+		
+        response.setHeader("Content-Disposition", "attachment; filename=\"" + fileName + "\";");
+        response.setHeader("Content-Transfer-Encoding", "binary");
+        response.setHeader("Content-Type", contentType);
+        response.setHeader("Content-Length", "" + fileLength);
+        response.setHeader("Pragma", "no-cache;"); // 브라우저가 캐시를 읽지 못하도록 설정
+        response.setHeader("Expires", "-1;");
+        		
+        try (FileInputStream fis = new FileInputStream(saveFileName);
+    		OutputStream out = response.getOutputStream();
+        ) {
+        	int readCount = 0;
+        	byte[] buffer = new byte[1024];
+        	// 지정된 경로의 파일을 읽어 byte[] 변수에 저장하고, 읽은 바이트 수를 반환
+        	while((readCount = fis.read(buffer)) != -1) {
+        		out.write(buffer, 0, readCount);
+        	}
+        	
+        	
+        } catch (Exception e) {
+        	throw new RuntimeException("파일 저장 오류");
+        }
 	}
 
 }
