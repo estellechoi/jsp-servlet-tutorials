@@ -16,14 +16,29 @@
 	</properties>
 
 	<dependencies>
+		<!-- Multipart 파일 업로드 관련 -->
+		<!-- commons-fileupload -->
+		<dependency>
+			<groupId>commons-fileupload</groupId>
+			<artifactId>commons-fileupload</artifactId>
+			<version>1.4</version>
+		</dependency>
+		
+		<!-- commons-io -->
+		<dependency>
+			<groupId>commons-io</groupId>
+			<artifactId>commons-io</artifactId>
+			<version>2.6</version>
+		</dependency>
+
 		<!-- 로깅 관련 -->
-		<!-- slf4j-api (logback-classic 1.2.3 라이브러리 추가시 자동으로 추가되므로 생략 가능)-->
+		<!-- slf4j-api (logback-classic 1.2.3 라이브러리 추가시 자동으로 추가되므로 생략 가능) -->
 		<dependency>
 			<groupId>org.slf4j</groupId>
 			<artifactId>slf4j-api</artifactId>
 			<version>1.7.25</version>
 		</dependency>
-		
+
 		<!-- logback-classic -->
 		<dependency>
 			<groupId>ch.qos.logback</groupId>
