@@ -20,6 +20,7 @@
 			<!-- 
 				* accept 속성 : 허용되는 file type 을 지정할 수 있다.
 				* image/* : 모든 타입의 img 파일만 업로드 허용
+				* 현재까지 브라우저 지원범위가 넓지 않다.
 			 -->		
 			<input type="file" name="reviewImg" accept="image/png, image/jpeg" required>
 		</div>
