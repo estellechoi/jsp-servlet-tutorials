@@ -6,6 +6,8 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.method.support.HandlerMethodArgumentResolver;
+import org.springframework.web.multipart.MultipartResolver;
+import org.springframework.web.multipart.commons.CommonsMultipartResolver;
 import org.springframework.web.servlet.config.annotation.DefaultServletHandlerConfigurer;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
@@ -63,6 +65,14 @@ public class ContextConfiguration extends WebMvcConfigurerAdapter {
 	public void addArgumentResolvers(List<HandlerMethodArgumentResolver> argumentResolvers) {
 		System.out.println("아규먼트 리졸버 등록");
 		argumentResolvers.add(new HandlerMapArgumentResolver());
+	}
+	
+	// MultipartResolver 등록 (DispathcerServlet 에 Multipart 요청이 오면 처리)
+	@Bean
+	public MultipartResolver multipartResolver() {
+		CommonsMultipartResolver multipartResolver = new CommonsMultipartResolver();
+		multipartResolver.setMaxUploadSize(1024 * 1024 * 10);
+		return multipartResolver;
 	}
 	
 	
